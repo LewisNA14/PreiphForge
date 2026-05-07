@@ -1,0 +1,2 @@
+[console_scripts]
+periforge = main:generate

@@ -1,0 +1,8 @@
+README.md
+main.py
+pyproject.toml
+periforge.egg-info/PKG-INFO
+periforge.egg-info/SOURCES.txt
+periforge.egg-info/dependency_links.txt
+periforge.egg-info/entry_points.txt
+periforge.egg-info/top_level.txt

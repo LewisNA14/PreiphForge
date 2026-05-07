@@ -4,21 +4,25 @@
  * @brief This is a template header file for any Peripheral to use
  */
 
-#ifndef {{ peripheral.name | upper}}_H
-#define {{ peripheral.name | upper}}_H
+#ifndef UART0_H
+#define UART0_H
 
 #include <stdint.h>
 
-{% for register in peripheral.registers %}
-#define {{ peripheral.name | upper }}_{{ register.name }}    {{ register.offset }}
-{% endfor %}
+#define UART0_BASE    1073750016
+
+/* Register Offsets */
+#define UART0_CR    0
+#define UART0_SR    4
+#define UART0_DR    8
+#define UART0_BRR    12
 
 /* Declarations / Function Prototypes */
-void {{peripheral.name}}_init(void);
-void {{peripheral.name}}_open(void);
-void {{peripheral.name}}_close(void);
-void {{peripheral.name}}_write(uint8_t data);
-uint8_t {{peripheral.name}}_read(void);
+void UART0_init(void);
+void UART0_open(void);
+void UART0_close(void);
+void UART0_write(uint8_t data);
+uint8_t UART0_read(void);
 
 typedef struct{
     uint32_t baud_rate;
@@ -35,4 +39,4 @@ typedef enum{
     UART_WRITE
 }uart_handle_t;
 
-#endif /* {{ peripheral.name | upper }}_H */
+#endif /* UART0_H */
